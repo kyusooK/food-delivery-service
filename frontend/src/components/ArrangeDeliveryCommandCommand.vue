@@ -5,7 +5,7 @@
         </v-card-title>
 
         <v-card-text>
-            <UUID offline label="OrderId" v-model="value.orderId" :editMode="editMode" @change="change"/>
+            <Number label="OrderId" v-model="value.orderId" :editMode="editMode"/>
             <Address offline label="DeliveryAddress" v-model="value.deliveryAddress" :editMode="editMode" @change="change"/>
         </v-card-text>
 
@@ -42,7 +42,7 @@
             value: {},
         }),
         created() {
-            this.value.orderId = {};
+            this.value.orderId = 0;
             this.value.deliveryAddress = {};
         },
         watch: {

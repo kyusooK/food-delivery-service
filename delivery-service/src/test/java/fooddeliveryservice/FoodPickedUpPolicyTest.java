@@ -49,8 +49,8 @@ public class FoodPickedUpPolicyTest {
       //given:  
       DeliveryArranged entity = new DeliveryArranged();
 
-      entity.setDeliveryId(123L);
-      entity.setOrderId(456L);
+      entity.setDeliveryId(12345L);
+      entity.setOrderId(98765L);
       entity.setDeliveryAddress([object Object]);
 
       repository.save(entity);
@@ -59,7 +59,7 @@ public class FoodPickedUpPolicyTest {
       
       DeliveryArranged event = new DeliveryArranged();
 
-      event.setDeliveryId(123L);
+      event.setDeliveryId(12345L);
       
       InventoryApplication.applicationContext = applicationContext;
 
@@ -88,7 +88,7 @@ public class FoodPickedUpPolicyTest {
 
          LOGGER.info("Response received: {}", received.getPayload());
 
-         assertEquals(outputEvent.getDeliveryId(), 123L);
+         assertEquals(outputEvent.getDeliveryId(), 12345L);
 
 
       } catch (JsonProcessingException e) {

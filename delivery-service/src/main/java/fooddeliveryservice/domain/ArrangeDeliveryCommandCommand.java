@@ -7,6 +7,6 @@ import lombok.Data;
 @Data
 public class ArrangeDeliveryCommandCommand {
 
-    private UUID orderId;
+    private Long orderId;
     private Address deliveryAddress;
 }
