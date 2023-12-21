@@ -17,6 +17,7 @@
 
         <v-card-text>
             <Number v-if="editMode" label="주문 ID" v-model="value.orderId" :editMode="editMode" :inputUI="''"/>
+            <List&lt;FoodItem&gt; offline label="음식/식재료 종류" v-model="value.foodItems" :editMode="editMode" @change="change"/>
             <FoodItemManager offline label="음식/식재료 종류" v-model="value.foodItems" :editMode="editMode" @change="change"/>
             <int offline label="수량" v-model="value.quantity" :editMode="editMode" @change="change"/>
             <String label="특별 요구 사항" v-model="value.specialRequests" :editMode="editMode" :inputUI="''"/>

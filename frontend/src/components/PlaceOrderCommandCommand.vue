@@ -5,6 +5,7 @@
         </v-card-title>
 
         <v-card-text>
+            <List&lt;FoodItem&gt; offline label="FoodItems" v-model="value.foodItems" :editMode="editMode" @change="change"/>
             <FoodItemList offline label="FoodItems" v-model="value.foodItems" :editMode="editMode" @change="change"/>
             <int offline label="Quantity" v-model="value.quantity" :editMode="editMode" @change="change"/>
             <String label="SpecialRequests" v-model="value.specialRequests" :editMode="editMode"/>
